@@ -4,6 +4,7 @@
 
 import RPi.GPIO as GPIO
 from flask import Flask, render_template, request
+from time import time as t
 
 app = Flask(__name__)
 GPIO.setmode(GPIO.BCM)
@@ -81,6 +82,7 @@ def action(deviceName, action):
     #          GPIO.output(actuator, GPIO.HIGH)
     #          switch = 1
     #   GPIO.output(actuator, GPIO.LOW)
+    #
 
     rlyOneSts = GPIO.input(rlyOne)
     rlyTwoSts = GPIO.input(rlyTwo)
@@ -98,5 +100,12 @@ def action(deviceName, action):
 
 # do the thing
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=80, debug=True)
+	try:
+		app.run(host='0.0.0.0', port=80, debug=True)
+	except:
+		#shut off all relays
+		GPIO.output(rlyOne, GPIO.LOW)
+		GPIO.output(rlyTwo, GPIO.LOW)
+		GPIO.output(rlyThree, GPIO.LOW)
+		GPIO.output(rlyFour, GPIO.LOW)
 
