@@ -1,0 +1,26 @@
+body {
+	background: green;
+	color: black;
+}
+.button {
+	font: bold 15px arial;
+	text-decoration: none;
+	background-color: #EEEEEE;
+	color: #333333;
+	padding: 10px 6px 10px 6px;
+	border-top: 2px solid #333333;
+	border-right: 2px solid #333333;
+	border-bottom: 2px solid #333333;
+	border-left: 2px solid #333333;
+}
+.button_pressed {
+	font: bold 15px arial;
+	text-decoration: underline;
+	background-color: #EEEEEE;
+	color: #333333;
+	padding: 10px 6px 10px 6px;
+	border-top: 2px solid #CCCCCC;
+	border-right: 2px solid #CCCCCC; 
+	border-bottom: 2px solid #CCCCCC;
+	border-left: 2px solid #CCCCCC;
+}

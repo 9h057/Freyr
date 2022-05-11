@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>GPIO control</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href='../static/style.css/'>
+		<!--<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="../static/mobile.css" type="text/css" />
+		<link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio: 2)" href="../static/mobile.css" type="text/css" />
+		<link rel="stylesheet" media="only screen and (min-resolution: 300dpi)" href="../static/mobile.css" type="text/css" /> -->
+	</head>
+	<body>
+		<!-- <h1>Actuator Status</h1>
+		<h2>	<br> Relay 1  ==> {{rlyOne}}
+			<br> Relay 2  ==> {{rlyTwo}}
+			<br> Relay 3  ==> {{rlyThree}}
+			<br> Relay 4  ==> {{rlyFour}}
+		</h2> -->
+		<h1>Sensor Status</h1>
+		<h2> Last Moisture  ==> NOT YET IMPLEMENTED</h2>
+		<br>
+		<br>
+		<h1> Commands
+			<br>Zone 1  ==> {{ rlyOne }}
+				{% if rlyOne == 1 %}
+					<a href="/rlyOne/off" class="button_pressed">TURN OFF</a>
+				{% else %}
+					<a href="/rlyOne/on" class="button">TURN ON</a>
+				{% endif %}
+			<br>Zone 2  ==> {{ rlyTwo }}
+				{% if rlyTwo == 1 %}
+					<a href="/rlyTwo/off" class="button_pressed">TURN OFF</a>
+				{% else %}
+					<a href="/rlyTwo/on" class="button">TURN ON</a>
+				{% endif %}
+			<br>Zone 3  ==> {{ rlyThree }}
+				{% if rlyThree == 1 %}
+					<a href="/rlyThree/off" class="button_pressed">TURN OFF</a>
+				{% else %}
+					<a href="/rlyThree/on" class="button">TURN ON</a>
+				{% endif %}
+			<br>Zone 4 ==> {{ rlyFour }}
+				{% if rlyFour == 1 %}
+					<a href="/rlyFour/off" class="button_pressed">TURN OFF</a>
+				{% else %}
+					<a href="/rlyFour/on" class="button">TURN ON</a>
+				{% endif %}
+		</h1>
+	</body>
+</html>

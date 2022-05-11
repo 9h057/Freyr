@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>GPIO control</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href='../static/style.css/'>
+		<!--<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="../static/mobile.css" type="text/css" />
+		<link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio: 2)" href="../static/mobile.css" type="text/css" />
+		<link rel="stylesheet" media="only screen and (min-resolution: 300dpi)" href="../static/mobile.css" type="text/css" /> -->
+	</head>
+	<body>
+		<h1>Actuator Status</h1>
+		<h2>	
+			<br> Relay 1  ==> {{rlyOne}}
+			<br> Relay 2  ==> {{rlyTwo}}
+			<br> Relay 3  ==> {{rlyThree}}
+			<br> Relay 4  ==> {{rlyFour}}
+		</h2>
+		<br>
+		<h1>Sensor Status</h1>
+		<h2> Last Moisture  ==> NOT YET IMPLEMENTED</h2>
+		<br>
+		<br>
+		<h1> Zone Control</h1>
+		<h2>
+			<br>
+				{% if rlyOne == 1 %}
+					<a href="/rlyOne/off" class="button_pressed">Turn Off Zone 1</a>
+				{% else %}
+					<a href="/rlyOne/on" class="button">Turn On Zone 1</a>
+				{% endif %}
+			<br><br>
+				{% if rlyTwo == 1 %}
+					<a href="/rlyTwo/off" class="button_pressed">Turn Off Zone 2</a>
+				{% else %}
+					<a href="/rlyTwo/on" class="button">Turn On Zone 2</a>
+				{% endif %}
+			<br><br>
+				{% if rlyThree == 1 %}
+					<a href="/rlyThree/off" class="button_pressed">Turn Off Zone 3</a>
+				{% else %}
+					<a href="/rlyThree/on" class="button">Turn On Zone 3</a>
+				{% endif %}
+			<br><br>
+				{% if rlyFour == 1 %}
+					<a href="/rlyFour/off" class="button_pressed">Turn Off Zone 4</a>
+				{% else %}
+					<a href="/rlyFour/on" class="button">Turn On Zone 4</a>
+				{% endif %}
+		</h2>
+		<br>
+		<br>
+		<h1>Time on</h1>
+		<h2>
+			<select>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select>
+		</h2>
+	</body>
+</html>
