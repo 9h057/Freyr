@@ -19,6 +19,7 @@
 		<br>
 		<h1>Sensor Status</h1>
 		<h2> Last Moisture  ==> NOT YET IMPLEMENTED</h2>
+		<!--  This realy wants a DB and i havn't done that yet -->
 		<br>
 		<br>
 		<h1> Zone Control</h1>
@@ -53,8 +54,13 @@
 		<!-- NOT YET FULLY IMPLIMENTED -->
 		<h1>Time on</h1>
 		<h2>
-			<lable for="quantity">Enter a time in minutes:</lable>
-			<input type="number" id="quantity" name="quantity" min="1" max="10">
+			<form action="onTime">
+				<lable for="zone">Select a zone</lable>
+				<input type="number" id="zone" name="zone" min="1" max="4">
+				<lable for="quantity">Enter a time in minutes:</lable>
+				<input type="number" id="quantity" name="quantity" min="1" max="10">
+				<input type="submit" value="Start">
+			</form>
 		</h2>
 	</body>
 </html>

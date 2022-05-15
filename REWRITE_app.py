@@ -123,7 +123,7 @@ def action(deviceName, action, *onTime):
     ##some input parsing needed here
     #onTime = int(60 * input("Enter minutes: "))
     #
-    #if action == "time":
+    #if action == "onTime":
     #   start_time = t()
     #   switch = 0
     #   while (t() - start_time < on_time):
