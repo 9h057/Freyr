@@ -11,10 +11,10 @@
 	<body>
 		<h1>Actuator Status</h1>
 		<h2>	
-			<br> Relay 1  ==> {{rlyOne}}
-			<br> Relay 2  ==> {{rlyTwo}}
-			<br> Relay 3  ==> {{rlyThree}}
-			<br> Relay 4  ==> {{rlyFour}}
+			<br> Zone 1  ==> {{zone1}}
+			<br> Zone 2  ==> {{zone2}}
+			<br> Zone 3  ==> {{zone3}}
+			<br> Zone 4  ==> {{zone4}}
 		</h2>
 		<br>
 		<h1>Sensor Status</h1>
@@ -24,28 +24,28 @@
 		<h1> Zone Control</h1>
 		<h2>
 			<br>
-				{% if rlyOne == 1 %}
-					<a href="/rlyOne/off" class="button_pressed">Turn Off Zone 1</a>
+				{% if zone1 == 1 %}
+					<a href="/zone1/off" class="button_pressed">Turn Off Zone 1</a>
 				{% else %}
-					<a href="/rlyOne/on" class="button">Turn On Zone 1</a>
+					<a href="/zone1/on" class="button">Turn On Zone 1</a>
 				{% endif %}
 			<br><br>
-				{% if rlyTwo == 1 %}
-					<a href="/rlyTwo/off" class="button_pressed">Turn Off Zone 2</a>
+				{% if zone2 == 1 %}
+					<a href="/zone2/off" class="button_pressed">Turn Off Zone 2</a>
 				{% else %}
-					<a href="/rlyTwo/on" class="button">Turn On Zone 2</a>
+					<a href="/zone2/on" class="button">Turn On Zone 2</a>
 				{% endif %}
 			<br><br>
-				{% if rlyThree == 1 %}
-					<a href="/rlyThree/off" class="button_pressed">Turn Off Zone 3</a>
+				{% if zone3 == 1 %}
+					<a href="/zone3/off" class="button_pressed">Turn Off Zone 3</a>
 				{% else %}
-					<a href="/rlyThree/on" class="button">Turn On Zone 3</a>
+					<a href="/zone3/on" class="button">Turn On Zone 3</a>
 				{% endif %}
 			<br><br>
-				{% if rlyFour == 1 %}
-					<a href="/rlyFour/off" class="button_pressed">Turn Off Zone 4</a>
+				{% if zone4 == 1 %}
+					<a href="/zone4/off" class="button_pressed">Turn Off Zone 4</a>
 				{% else %}
-					<a href="/rlyFour/on" class="button">Turn On Zone 4</a>
+					<a href="/zone4/on" class="button">Turn On Zone 4</a>
 				{% endif %}
 		</h2>
 		<br>
