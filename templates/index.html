@@ -9,6 +9,62 @@
 		<link rel="stylesheet" media="only screen and (min-resolution: 300dpi)" href="../static/mobile.css" type="text/css" /> -->
 	</head>
 	<body>
+		
+		<table>
+			<tr>
+				<th><h1>Actuator Status</h1></th>
+				<th><h1>Zone Control</h1></th>
+			</tr>
+			<tr>
+				<td><br><br>
+					Relay 1  ==> {{rlyOne}}
+				</td>
+				<td><br><br>
+					{% if rlyOne == 1 %}
+						<a href="/rlyOne/off" class="button_pressed">Turn Off Zone 1</a>
+					{% else %}
+						<a href="/rlyOne/on" class="button">Turn On Zone 1</a>
+					{% endif %}
+				</td>
+			</tr>
+			<tr>
+				<td><br><br>
+					Relay 2  ==> {{rlyTwo}}
+				</td>
+				<td><br><br>
+					{% if rlyTwo == 1 %}
+						<a href="/rlyTwo/off" class="button_pressed">Turn Off Zone 2</a>
+					{% else %}
+						<a href="/rlyTwo/on" class="button">Turn On Zone 2</a>
+					{% endif %}
+				</td>
+			</tr>
+			<tr>
+				<td><br><br>
+					Relay 3  ==> {{rlyThree}}
+				</td>
+				<td><br><br>
+					{% if rlyThree == 1 %}
+						<a href="/rlyThree/off" class="button_pressed">Turn Off Zone 3</a>
+					{% else %}
+						<a href="/rlyThree/on" class="button">Turn On Zone 3</a>
+					{% endif %}
+				</td>
+			</tr>
+			<tr>
+				<td><br><br>
+					Relay 4  ==> {{rlyFour}}
+				</td>
+				<td><br><br>
+					{% if rlyFour == 1 %}
+						<a href="/rlyFour/off" class="button_pressed">Turn Off Zone 4</a>
+					{% else %}
+						<a href="/rlyFour/on" class="button">Turn On Zone 4</a>
+					{% endif %}
+				</td>
+			</tr>
+		</table>
+		<!--
 		<h1>Actuator Status</h1>
 		<h2>	
 			<br> Relay 1  ==> {{rlyOne}}
@@ -17,14 +73,10 @@
 			<br> Relay 4  ==> {{rlyFour}}
 		</h2>
 		<br>
-		<h1>Sensor Status</h1>
-		<h2> Last Moisture  ==> NOT YET IMPLEMENTED</h2>
-		<!--  This realy wants a DB and i havn't done that yet -->
 		<br>
-		<br>
-		<h1> Zone Control</h1>
+		<h1>Zone Control</h1>
 		<h2>
-			<br>
+			<br><br>
 				{% if rlyOne == 1 %}
 					<a href="/rlyOne/off" class="button_pressed">Turn Off Zone 1</a>
 				{% else %}
@@ -48,14 +100,16 @@
 				{% else %}
 					<a href="/rlyFour/on" class="button">Turn On Zone 4</a>
 				{% endif %}
-		</h2>
+		</h2>-->
+		<br>
+		<br>
+		<h1>Sensor Status</h1>
+		<h2> Last Moisture  ==> NOT YET IMPLEMENTED</h2>
+		<!--  This realy wants a DB and i havn't done that yet -->
+		<!--  Also likely to be a huge PITA; run wire to each zone -->
 		<br>
 		<br>
 		<!-- NOT YET FULLY IMPLIMENTED -->
-		<h1>Time on</h1>
-		<h2>
-			<lable for="quantity">Enter a time in minutes:</lable>
-			<input type="number" id="quantity" name="quantity" min="1" max="10">
-		</h2>
+		<iframe src="./REWRITE_form.html" height="225" width="100%"></iframe>
 	</body>
 </html>

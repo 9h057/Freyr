@@ -9,65 +9,61 @@
 		<link rel="stylesheet" media="only screen and (min-resolution: 300dpi)" href="../static/mobile.css" type="text/css" /> -->
 	</head>
 	<body>
-		<h1>Actuator Status</h1>
-		<h2>	
-			<br> Zone 1  ==> {{zone1}}
-			<br> Zone 2  ==> {{zone2}}
-			<br> Zone 3  ==> {{zone3}}
-			<br> Zone 4  ==> {{zone4}}
-		</h2>
+		<table>
+			<tr>
+				<th>Actuator Status</th>
+				<th>Zone Control</th>
+			</tr>
+			<tr>
+				<td><br><br>Zone 1  ==> {{zone1}}</td>
+				<td><br><br>
+					{% if zone1 == 1 %}
+						<a href="/zone1/off" class="button_pressed">Turn Off Zone 1</a>
+					{% else %}
+						<a href="/zone1/on" class="button">Turn On Zone 1</a>
+					{% endif %}
+				</td>
+			</tr>
+			<tr>
+				<td><br><br>Zone 2  ==> {{zone2}}</td>
+				<td><br><br>
+					{% if zone2 == 1 %}
+						<a href="/zone2/off" class="button_pressed">Turn Off Zone 2</a>
+					{% else %}
+						<a href="/zone2/on" class="button">Turn On Zone 2</a>
+					{% endif %}
+				</td>
+			</tr>
+			<tr>
+				<td><br><br>Zone 3  ==> {{zone3}}</td>
+				<td><br><br>
+					{% if zone3 == 1 %}
+						<a href="/zone3/off" class="button_pressed">Turn Off Zone 3</a>
+					{% else %}
+						<a href="/zone3/on" class="button">Turn On Zone 3</a>
+					{% endif %}
+				</td>
+			</tr>
+			<tr>
+				<td><br><br>Zone 4  ==> {{zone4}}</td>
+				<td><br><br>
+					{% if zone4 == 1 %}
+						<a href="/zone4/off" class="button_pressed">Turn Off Zone 4</a>
+					{% else %}
+						<a href="/zone4/on" class="button">Turn On Zone 4</a>
+					{% endif %}
+				</td>
+			</tr>
+		</table>
+		<br>
 		<br>
 		<h1>Sensor Status</h1>
 		<h2> Last Moisture  ==> NOT YET IMPLEMENTED</h2>
 		<!--  This realy wants a DB and i havn't done that yet -->
-		<br>
-		<br>
-		<h1> Zone Control</h1>
-		<h2>
-			<br>
-				{% if zone1 == 1 %}
-					<a href="/zone1/off" class="button_pressed">Turn Off Zone 1</a>
-				{% else %}
-					<a href="/zone1/on" class="button">Turn On Zone 1</a>
-				{% endif %}
-			<br><br>
-				{% if zone2 == 1 %}
-					<a href="/zone2/off" class="button_pressed">Turn Off Zone 2</a>
-				{% else %}
-					<a href="/zone2/on" class="button">Turn On Zone 2</a>
-				{% endif %}
-			<br><br>
-				{% if zone3 == 1 %}
-					<a href="/zone3/off" class="button_pressed">Turn Off Zone 3</a>
-				{% else %}
-					<a href="/zone3/on" class="button">Turn On Zone 3</a>
-				{% endif %}
-			<br><br>
-				{% if zone4 == 1 %}
-					<a href="/zone4/off" class="button_pressed">Turn Off Zone 4</a>
-				{% else %}
-					<a href="/zone4/on" class="button">Turn On Zone 4</a>
-				{% endif %}
-		</h2>
+		<!--  Also likely to be a huge PITA; run wire to each zone -->
 		<br>
 		<br>
 		<!-- NOT YET FULLY IMPLIMENTED -->
-		<h1>Time on</h1>
-		<h2>
-			<form action="onTime">
-				<lable for="zone">Select a zone</lable>
-				<select name="zone">
-					<option value="zone1">Zone 1</option>
-					<option value="zone2">Zone 2</option>
-					<option value="zone3">Zone 3</option>
-					<option value="zone4">Zone 4</option>
-				</select>
-				<lable for="quantity">Enter a time in minutes:</lable>
-				<input type="number" id="quantity" name="quantity" min="1" max="10">
-				<input type="submit" value="Start">
-			</form>
-			<br>
-			<br>
-		</h2>
+		<iframe src="./REWRITE_form.html" height="225" width="100%"></iframe>
 	</body>
 </html>

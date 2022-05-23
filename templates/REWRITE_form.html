@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Ttimer Form</title>
+	</head>
+	<body>
+		<h1>Time on</h1>
+		<h2>
+			<form action="onTime">
+				<table>
+					<tr>
+						<td>
+							<lable for="zone">Select a zone</lable>
+						</td>
+						<td>
+							<select name="zone">
+								<option value="zone1">Zone 1</option>
+								<option value="zone2">Zone 2</option>
+								<option value="zone3">Zone 3</option>
+								<option value="zone4">Zone 4</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<lable for="quantity">Enter a time in minutes:  </lable>
+						</td>
+						<td>
+							<input type="number" id="quantity" name="quantity" min="1" max="10">
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<input type="submit" value="Start">
+						</td>
+					</tr>
+				</table>
+			</form>
+			<br>
+			<br>
+	</body>
+</html>
