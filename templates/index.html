@@ -11,16 +11,25 @@
 		-->
 	</head>
 	<body>
-		
+		<style>
+			table, th, td {
+			  border: 1px solid black;
+			}
+			th, td {
+			  padding: 10px;
+			}
+		</style>
 		<table>
 			<tr>
 				<th><h1>Actuator Status</h1></th>
+				<th></th>
 				<th><h1>Zone Control</h1></th>
 			</tr>
 			<tr>
 				<td><br><br>
 					Relay 1  ==> {{rlyOne}}
 				</td>
+				<td></td>
 				<td><br><br>
 					{% if rlyOne == 1 %}
 						<a href="/rlyOne/off" class="button_pressed">Turn Off Zone 1</a>
@@ -33,6 +42,7 @@
 				<td><br><br>
 					Relay 2  ==> {{rlyTwo}}
 				</td>
+				<td></td>
 				<td><br><br>
 					{% if rlyTwo == 1 %}
 						<a href="/rlyTwo/off" class="button_pressed">Turn Off Zone 2</a>
@@ -45,6 +55,7 @@
 				<td><br><br>
 					Relay 3  ==> {{rlyThree}}
 				</td>
+				<td></td>
 				<td><br><br>
 					{% if rlyThree == 1 %}
 						<a href="/rlyThree/off" class="button_pressed">Turn Off Zone 3</a>
@@ -57,6 +68,7 @@
 				<td><br><br>
 					Relay 4  ==> {{rlyFour}}
 				</td>
+				<td></td>
 				<td><br><br>
 					{% if rlyFour == 1 %}
 						<a href="/rlyFour/off" class="button_pressed">Turn Off Zone 4</a>
