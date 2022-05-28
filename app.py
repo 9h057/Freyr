@@ -10,6 +10,7 @@ app = Flask(__name__)
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
+# This mess should be rewiten to use a dict for vars and inits 
 # pin vars
 # pins for relay shield: (BCM: 4, 22, 6, 26) (wire pi:7, 3, 22, 25)
 rlyOne = 4
@@ -29,7 +30,7 @@ GPIO.setup(rlyTwo, GPIO.OUT)
 GPIO.setup(rlyThree, GPIO.OUT)
 GPIO.setup(rlyFour, GPIO.OUT)
 
-# set pin vars low
+# set init pin vars low
 GPIO.output(rlyOne, GPIO.LOW)
 GPIO.output(rlyTwo, GPIO.LOW)
 GPIO.output(rlyThree, GPIO.LOW)
@@ -63,26 +64,10 @@ def action(deviceName, action):
     if deviceName == 'rlyFour':
         actuator = rlyFour
 
-
     if action == "on":
         GPIO.output(actuator, GPIO.HIGH)
     if action == "off":
         GPIO.output(actuator, GPIO.LOW)
-
-    #from time import time as t
-    #
-    ##some input parsing needed here
-    #on_time = int(60 * input("Enter minutes: "))
-    #
-    #if action == "time":
-    #   start_time = t()
-    #   switch = 0
-    #   while (t() - start_time < on_time):
-    #       if switch == 0:
-    #          GPIO.output(actuator, GPIO.HIGH)
-    #          switch = 1
-    #   GPIO.output(actuator, GPIO.LOW)
-    #
 
     rlyOneSts = GPIO.input(rlyOne)
     rlyTwoSts = GPIO.input(rlyTwo)
@@ -96,6 +81,26 @@ def action(deviceName, action):
             'rlyFour' : rlyFourSts,
     }
     return render_template('index.html', **templateData)
+
+@app.route('/sub_pages/timer_form.html')
+def timer():
+	    #from time import time as t
+    #
+    ##some input parsing needed here
+    #on_time = int(60 * input("Enter minutes: "))
+    #
+    #if action == "time":
+    #   start_time = t()
+    #   switch = 0
+    #   while (t() - start_time < on_time):
+    #       if switch == 0:
+    #          GPIO.output(actuator, GPIO.HIGH)
+    #          switch = 1
+    #   GPIO.output(actuator, GPIO.LOW)
+    #
+	
+	return flask.send_file('/sub_pages/timer_form.html')
+
 
 
 # do the thing

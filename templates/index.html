@@ -78,48 +78,14 @@
 				</td>
 			</tr>
 		</table>
-		<!--
-		<h1>Actuator Status</h1>
-		<h2>	
-			<br> Relay 1  ==> {{rlyOne}}
-			<br> Relay 2  ==> {{rlyTwo}}
-			<br> Relay 3  ==> {{rlyThree}}
-			<br> Relay 4  ==> {{rlyFour}}
-		</h2>
-		<br>
-		<br>
-		<h1>Zone Control</h1>
-		<h2>
-			<br><br>
-				{% if rlyOne == 1 %}
-					<a href="/rlyOne/off" class="button_pressed">Turn Off Zone 1</a>
-				{% else %}
-					<a href="/rlyOne/on" class="button">Turn On Zone 1</a>
-				{% endif %}
-			<br><br>
-				{% if rlyTwo == 1 %}
-					<a href="/rlyTwo/off" class="button_pressed">Turn Off Zone 2</a>
-				{% else %}
-					<a href="/rlyTwo/on" class="button">Turn On Zone 2</a>
-				{% endif %}
-			<br><br>
-				{% if rlyThree == 1 %}
-					<a href="/rlyThree/off" class="button_pressed">Turn Off Zone 3</a>
-				{% else %}
-					<a href="/rlyThree/on" class="button">Turn On Zone 3</a>
-				{% endif %}
-			<br><br>
-				{% if rlyFour == 1 %}
-					<a href="/rlyFour/off" class="button_pressed">Turn Off Zone 4</a>
-				{% else %}
-					<a href="/rlyFour/on" class="button">Turn On Zone 4</a>
-				{% endif %}
-		</h2>-->
 		<br>
 		<br>
 		<br>
 		<!-- NOT YET FULLY IMPLIMENTED -->
 		<iframe src="./sub_pages/timer_form.html" height="225" width="100%"></iframe>
+		<!-- 
+		<iframe src="{{ url_for('timer') }}" height="225" width="100%"></iframe>
+		-->
 		<br>
 		<br>
 		<h1>Sensor Status</h1>
